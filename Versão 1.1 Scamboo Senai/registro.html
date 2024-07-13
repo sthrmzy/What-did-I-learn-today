@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="registro.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&family=Roboto:wght@900&display=swap" rel="stylesheet">
+
+        <p class="registro">Registro</p>
+
+
+        <script>
+          function redirecionar() {
+            window.location.href = "home.html"; // Redireciona para a página inicial (home.html)
+          }
+          
+          function registrar() {
+            // Aqui você pode adicionar a lógica para processar o registro
+            // Se o registro for concluído com sucesso, chame a função de redirecionamento
+            var registroConcluido = true; // Altere para false se o registro não for concluído com sucesso
+            
+            if (registroConcluido) {
+              redirecionar(); // Chama a função de redirecionamento
+            }
+          }
+        </script>
+
+<body>
+  <section class="formulario">
+    
+    <div class="logslogslogs">
+    <form action="registro.php" method="POST" class="formulario">
+
+      <div class="formsforms">
+      <div class="nome">
+      <label for="nome"></label>
+      <input type="text"  name="nome" id="nome" placeholder="Nome" required>
+      </div>
+      
+      <div class="sobrenome">
+      <label for="sobrenome"></label>
+      <input type="text"  name="sobrenome"  id="nome" placeholder="Sobrenome"required>
+      </div>
+      
+      <div class="username">
+      <label for="username"></label>
+      <input type="text"  name="username" id="nome" placeholder="Nome de usuario" required>
+      </div>
+      
+      <div class="senha">
+      <label for="senha"></label>
+      <input type="password"  name="password" id="nome" placeholder="Senha" required>
+     </div>
+    </div>
+    <div class="lindos">
+    <input type="submit" onclick="registrar()" class="registrando" value="Registrar">
+
+    <a class="voltar" href="index.html">Back</a>
+  
+    </div>
+
+    </form>
+    </div>
+    </section>
+
+</body>
+</html>
