@@ -1,0 +1,142 @@
+body{
+    background-color:#1C232E;
+    font-family: 'Roboto','Nunito Sans';
+    overflow:hidden;
+}
+
+.logslogslogs{
+    display: flex;
+    flex-direction: column;
+    color:#53AC59;
+    position:absolute;
+    left: 40%;
+    top:30%;
+}
+
+
+.formulario form{
+    display:flex;
+    flex-direction: column;
+    position:absolute;
+    top:30%;
+    top: 40%; /* Ajuste a posição vertical do formulário */
+    margin-bottom: 20px; /* Adicionado espaçamento abaixo do formulário */
+}
+
+
+.formsforms input{
+    margin-top: 10px;
+    background-color: #1C232E;
+    border: 2px solid #53AC59;
+    border-radius: 25px;
+    padding-left: 10px;
+    width: 400px;
+    height: 44px;
+
+}
+
+.formsforms text::placeholder{
+    color:aliceblue;
+    padding-left: 10px;
+    font-size: 14px;
+    position: center;
+}
+
+
+.registrando {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 13px;
+    line-height: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #FFE1A8;
+    position: relative;
+    box-sizing: border-box;
+    background: #0F684B;
+    border: 2px solid #0F684B;
+    border-radius: 25px;
+    padding-left: 10px;
+    width: 10vw;
+    height: 2vw;
+    transition: transform 0.3s;
+}
+
+.registrando:hover {
+    transform: scale(1.2);
+}
+
+.lindos{
+    display:flex;
+    align-content: center;
+    flex-direction: row;
+    gap: 30px;
+}
+
+
+.registro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 132%;
+
+    letter-spacing: 0.01em;
+    font-feature-settings: 'liga' off;
+
+    color: #53AC59;
+
+    margin-top: 10vw;
+   
+}
+
+.voltar {
+    box-sizing: border-box;
+    background: #252422;
+    border: 2px solid #252422;
+    border-radius: 25px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 13px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #53AC59;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 25px;
+    padding-left: 10px;
+    width: 10vw;
+    border: 2px solid #0F684B;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.voltar:hover {
+    transform: scale(1.2);
+}
+
+.formsforms input::placeholder {
+    color: #53AC59 /* Defina a cor desejada para o placeholder */
+    
+}
+
+.registrando{
+    margin-top: 1vw;
+}
+
+.voltar{
+    margin-top: 1vw;
+}
+
+#nome{
+    color:#53AC59;
+}

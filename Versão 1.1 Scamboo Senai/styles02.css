@@ -1,0 +1,68 @@
+body{
+    background-color:#1C232E;
+    font-family: 'Roboto','Nunito Sans';
+    overflow:hidden;
+}
+
+.logslogslogs{
+    display: flex;
+    flex-direction: column;
+    color:#53AC59;
+    position:absolute;
+    left: 40%;
+    top:30%;
+}
+.formulario form{
+    display:flex;
+    flex-direction: column;
+    position:absolute;
+    top:30%;
+}
+
+.formulario input{
+    margin-top: 10px;
+    background-color: #1C232E;
+    border: 2px solid #53AC59;
+    border-radius: 25px;
+    padding-left: 10px;
+    width: 400px;
+    height: 44px;
+}
+
+.formulario::placeholder{
+    color:aliceblue;
+    padding-left: 10px;
+    font-size: 14px;
+    position: center;
+}
+
+.registrando{
+    background-color: #252422;
+    border: 2px solid #53AC59;
+    border-radius: 25px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 19px;
+    color:#53AC59;
+    cursor: pointer;
+}
+
+.registrando{
+    
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 900;
+font-size: 13px;
+line-height: 15px;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+
+color: #FFE1A8;
+
+}
+

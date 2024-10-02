@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exemplo de Cabeçalho Responsivo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="home.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&family=Roboto:wght@900&display=swap" rel="stylesheet">
+  <script src="home.js"></script>
+</head>
+
+<body>
+    <header>
+      <div class="logo">
+        <img src="logos.png"  class="logos" alt="Logo da empresa">
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar...">
+      </div>
+      <div class="buttons">
+        <button id="anuncie-btn"><i class="fas fa-bullhorn"></i> Anuncie</button>
+        <button><i class="fas fa-user" href="perfil.html"></i> Perfil</button>
+      </div>
+    </header>
+
+
+
+
+    <div class="categories">
+        <a href="#">Tudo</a>
+        <a href="#">Eletrônicos</a>
+        <a href="#">Para Casa</a>
+        <a href="#">Roupas</a>
+      </div>
+
+
+
+
+
+       
+
+      <div class="post-form" id="post-form">
+        <div class="post-form-content">
+          <h2>Anuncie</h2>
+          <label for="assunto" id="assuntos">Assunto:</label>
+          <input type="text" id="assunto" placeholder="Digite o assunto">
+    
+          <label for="categoria">Categoria:</label>
+          <select id="categoria">
+            <option value="">Selecione a categoria</option>
+            <option value="eletronicos">Eletrônicos</option>
+            <option value="para-casa">Para Casa</option>
+            <option value="roupas">Roupas</option>
+          </select>
+    
+          <label for="descricao">Descrição:</label>
+          <textarea id="descricao" placeholder="Digite a descrição"></textarea>
+    
+          <label for="foto">Foto:</label>
+          <input type="text" id="foto" placeholder="URL da foto">
+    
+          <button id="enviar-btn">Enviar</button>
+        </div>
+      </div>
+    
+      <div class="posts-container" id="posts-container">
+
+      </div>
+    
+
+
+
+      <div id="chatButtonContainer"></div>
+
+      <div class="chat-container">
+        <div class="chat-header">
+          <h4>Nome de Usuário</h4>
+          <button class="close-chat-button">×</button>
+        </div>
+        <div class="chat-body">
+          <!-- Mensagens -->
+        </div>
+        <input type="text" class="message-input" placeholder="Digite sua mensagem...">
+        <button class="send-button">Enviar</button>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+      <script>
+        const anuncieBtn = document.getElementById('anuncie-btn');
+        const postForm = document.getElementById('post-form');
+        const enviarBtn = document.getElementById('enviar-btn');
+        const postsContainer = document.getElementById('posts-container');
+    
+        anuncieBtn.addEventListener('click', () => {
+          postForm.style.display = 'flex';
+        });
+    
+        postForm.addEventListener('click', (event) => {
+          if (event.target === postForm) {
+            postForm.style.display = 'none';
+          }
+        });
+    
+
+
+        enviarBtn.addEventListener('click', () => {
+  const assunto = document.getElementById('assunto').value;
+  const categoria = document.getElementById('categoria').value;
+  const descricao = document.getElementById('descricao').value;
+  const foto = document.getElementById('foto').value;
+
+  const postCard = document.createElement('div');
+  postCard.classList.add('post-card');
+  postCard.innerHTML = `
+    <div class="post-content">
+      <div class="user-header">
+        <div class="user-avatar">
+          <img src="fotousuário.webp" alt="Avatar do usuário">
+        </div>
+        <div class="user-info">
+          <h4>Nome do Usuário</h4>
+          <p>@username</p>
+        </div>
+      </div>
+      <h3>${assunto}</h3>
+      <p><strong>Categoria:</strong> ${categoria}</p>
+      <p>${descricao}</p>
+      <p><strong></strong>  <img src="${foto}" alt=""></p>
+    </div>
+  `;
+
+  // Cria o botão de chat
+  const chatButton = document.createElement('button');
+  chatButton.classList.add('chat-button');
+  chatButton.textContent = 'Chat';
+
+  // Adiciona o evento de clique ao botão de chat
+  chatButton.addEventListener('click', function() {
+    chatContainer.style.display = 'block';
+  });
+
+  // Adiciona o botão de chat ao postCard
+  postCard.appendChild(chatButton);
+
+  // Adiciona o postCard ao container de posts
+  postsContainer.appendChild(postCard);
+
+  postForm.style.display = 'none';
+
+  document.getElementById('assunto').value = '';
+  document.getElementById('categoria').value = '';
+  document.getElementById('descricao').value = '';
+  document.getElementById('foto').value = '';
+});
+
+
+
+
+
+
+
+
+var chatContainer = document.querySelector('.chat-container');
+var closeChatButton = document.querySelector('.close-chat-button');
+var messageInput = document.querySelector('.message-input');
+var sendButton = document.querySelector('.send-button');
+var chatBody = document.querySelector('.chat-body');
+
+// Obter todos os elementos com a classe "chat-button"
+var chatButtons = document.querySelectorAll('.chat-button');
+
+
+
+
+
+// Iterar sobre cada botão e adicionar o evento de clique
+chatButtons.forEach(function(chatButton) {
+  chatButton.addEventListener('click', function() {
+    chatContainer.style.display = 'block';
+  });
+});
+
+closeChatButton.addEventListener('click', function() {
+  chatContainer.style.display = 'none';
+});
+
+sendButton.addEventListener('click', function() {
+  var message = messageInput.value;
+  if (message.trim() !== '') {
+    var messageContainer = document.createElement('div');
+    messageContainer.classList.add('message-container', 'sender');
+    var messageContent = document.createElement('p');
+    messageContent.textContent = message;
+    messageContainer.appendChild(messageContent);
+    chatBody.appendChild(messageContainer);
+    messageInput.value = '';
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }
+});
+
+messageInput.addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+    sendButton.click();
+  }
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+      
+
+  
+
+  </body>
+  </html>
